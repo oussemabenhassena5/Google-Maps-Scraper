@@ -113,7 +113,7 @@ This tool must be used in accordance with:
 
 ## 🛠️ Professional Support
 
-For enterprise implementations and custom scraping solutions:
+For custom scraping solutions:
 
 📧 oussemabenhassena5@gmail.com 
 💼 [LinkedIn Profile](https://www.linkedin.com/in/oussema-ben-hassena-b445122a4)
