@@ -14,7 +14,6 @@ class Business:
     address: str = None
     website: str = None
     phone_number: str = None
-    reviews_count: int = None
     reviews_average: float = None
     latitude: float = None
     longitude: float = None
@@ -142,13 +141,10 @@ def main():
                     page.wait_for_timeout(5000)
 
                     # Updated selectors for better reliability
-                    name_xpath = '//h1[contains(@class, "fontHeadlineLarge")]'
+                    name_xpath = '//*[@id="QA0Szd"]/div/div/div[1]/div[3]/div/div[1]/div/div/div[2]/div[2]/div/div[1]/div[1]/h1'
                     address_xpath = '//button[@data-item-id="address"]//div[contains(@class, "fontBodyMedium")]'
                     website_xpath = '//a[@data-item-id="authority"]//div[contains(@class, "fontBodyMedium")]'
                     phone_xpath = '//button[contains(@data-item-id, "phone:tel:")]//div[contains(@class, "fontBodyMedium")]'
-                    review_count_xpath = (
-                        '//button[@jsaction="pane.reviewChart.moreReviews"]//span'
-                    )
                     reviews_avg_xpath = '//div[@jsaction="pane.reviewChart.moreReviews"]//div[@role="img"]'
 
                     business = Business()
@@ -173,17 +169,6 @@ def main():
                         business.phone_number = page.locator(
                             phone_xpath
                         ).first.inner_text()
-
-                    if page.locator(review_count_xpath).count() > 0:
-                        review_text = page.locator(
-                            review_count_xpath
-                        ).first.inner_text()
-                        try:
-                            business.reviews_count = int(
-                                review_text.split()[0].replace(",", "").strip()
-                            )
-                        except ValueError:
-                            business.reviews_count = 0
 
                     if page.locator(reviews_avg_xpath).count() > 0:
                         try:
