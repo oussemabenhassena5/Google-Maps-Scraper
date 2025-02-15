@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Playwright](https://img.shields.io/badge/Headless%20Browser-Playwright-blueviolet)](https://playwright.dev/)
 
-A sophisticated web scraping solution for extracting comprehensive business intelligence from Google Maps.
+
 ![Google Maps Scraper Demo](image.png)  
 
 
