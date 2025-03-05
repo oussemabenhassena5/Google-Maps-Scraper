@@ -40,7 +40,7 @@ pip install -r requirements.txt
 playwright install chromium
 ```
 
-## 🏎️ Quick Start
+## ⚡️ Quick Start
 
 ### Single Location Extraction:
 
